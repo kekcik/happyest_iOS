@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C0FADF91E7DCDB800D4CEB7 /* MealListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FADF81E7DCDB800D4CEB7 /* MealListVC.swift */; };
+		2C0FADFB1E7DCDEE00D4CEB7 /* SaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FADFA1E7DCDEE00D4CEB7 /* SaleVC.swift */; };
+		2C0FADFD1E7DCE3500D4CEB7 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FADFC1E7DCE3500D4CEB7 /* CartVC.swift */; };
+		2C0FADFF1E7DCE5200D4CEB7 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FADFE1E7DCE5200D4CEB7 /* InfoVC.swift */; };
+		2C0FAE011E7DCE5F00D4CEB7 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FAE001E7DCE5F00D4CEB7 /* SettingVC.swift */; };
+		2C0FAE031E7DD0B000D4CEB7 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0FAE021E7DD0B000D4CEB7 /* CartManager.swift */; };
+		2C13A2291E813B56007BB5D9 /* MealTBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13A2271E813B56007BB5D9 /* MealTBCell.swift */; };
+		2C13A2301E814552007BB5D9 /* MeallTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C13A22F1E814552007BB5D9 /* MeallTVC.swift */; };
+		2C13A2321E829495007BB5D9 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C13A2311E829495007BB5D9 /* img1.png */; };
+		2C460CDA1E71E103005D671D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460CD91E71E103005D671D /* AppDelegate.swift */; };
+		2C460CDC1E71E103005D671D /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460CDB1E71E103005D671D /* MenuVC.swift */; };
+		2C460CDF1E71E103005D671D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C460CDD1E71E103005D671D /* Main.storyboard */; };
+		2C460CE21E71E103005D671D /* Happy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C460CE01E71E103005D671D /* Happy.xcdatamodeld */; };
+		2C460CE41E71E103005D671D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C460CE31E71E103005D671D /* Assets.xcassets */; };
+		2C460CE71E71E103005D671D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C460CE51E71E103005D671D /* LaunchScreen.storyboard */; };
+		2C460D081E75FC4B005D671D /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D071E75FC4B005D671D /* ProductManager.swift */; };
+		2C460D0B1E75FD15005D671D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C460D091E75FD15005D671D /* Alamofire.framework */; };
+		2C460D0C1E75FD15005D671D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C460D0A1E75FD15005D671D /* SwiftyJSON.framework */; };
+		2C460D1C1E780C22005D671D /* MealAbstractProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D1B1E780C22005D671D /* MealAbstractProtocol.swift */; };
+		2C460D1E1E780C4C005D671D /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D1D1E780C4C005D671D /* Pizza.swift */; };
+		2C460D201E780CCE005D671D /* PizzaProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D1F1E780CCE005D671D /* PizzaProtocol.swift */; };
+		2C460D221E780F8F005D671D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D211E780F8F005D671D /* Meal.swift */; };
+		2C460D241E781457005D671D /* PizzaOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D231E781457005D671D /* PizzaOption.swift */; };
+		2C460D281E784994005D671D /* Wok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D271E784994005D671D /* Wok.swift */; };
+		2C460D2B1E784A5B005D671D /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2A1E784A5B005D671D /* MenuManager.swift */; };
+		2C460D2E1E795C26005D671D /* JSONTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2D1E795C26005D671D /* JSONTo.swift */; };
+		2C460D301E7ABA6B005D671D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2F1E7ABA6B005D671D /* ImageManager.swift */; };
+		7390B581809754FF61C84CC2 /* Pods_Happy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06762D3C815A02CFAF10EAEE /* Pods-Happy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happy/Pods-Happy.debug.xcconfig"; sourceTree = "<group>"; };
+		2C0FADF81E7DCDB800D4CEB7 /* MealListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListVC.swift; sourceTree = "<group>"; };
+		2C0FADFA1E7DCDEE00D4CEB7 /* SaleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleVC.swift; sourceTree = "<group>"; };
+		2C0FADFC1E7DCE3500D4CEB7 /* CartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		2C0FADFE1E7DCE5200D4CEB7 /* InfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		2C0FAE001E7DCE5F00D4CEB7 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		2C0FAE021E7DD0B000D4CEB7 /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		2C13A2271E813B56007BB5D9 /* MealTBCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTBCell.swift; sourceTree = "<group>"; };
+		2C13A22F1E814552007BB5D9 /* MeallTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeallTVC.swift; sourceTree = "<group>"; };
+		2C13A2311E829495007BB5D9 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		2C460CD61E71E103005D671D /* Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C460CD91E71E103005D671D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C460CDB1E71E103005D671D /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		2C460CDE1E71E103005D671D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C460CE11E71E103005D671D /* Happy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy.xcdatamodel; sourceTree = "<group>"; };
+		2C460CE31E71E103005D671D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C460CE61E71E103005D671D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C460CE81E71E103005D671D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C460D071E75FC4B005D671D /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		2C460D091E75FD15005D671D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/Happy-cxyeyaffgmddfxbsqntymbllgsqa/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		2C460D0A1E75FD15005D671D /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/Happy-cxyeyaffgmddfxbsqntymbllgsqa/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		2C460D1B1E780C22005D671D /* MealAbstractProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealAbstractProtocol.swift; sourceTree = "<group>"; };
+		2C460D1D1E780C4C005D671D /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		2C460D1F1E780CCE005D671D /* PizzaProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaProtocol.swift; sourceTree = "<group>"; };
+		2C460D211E780F8F005D671D /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		2C460D231E781457005D671D /* PizzaOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaOption.swift; sourceTree = "<group>"; };
+		2C460D271E784994005D671D /* Wok.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wok.swift; sourceTree = "<group>"; };
+		2C460D2A1E784A5B005D671D /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		2C460D2D1E795C26005D671D /* JSONTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTo.swift; sourceTree = "<group>"; };
+		2C460D2F1E7ABA6B005D671D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happy/Pods-Happy.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C460CD31E71E103005D671D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C460D0B1E75FD15005D671D /* Alamofire.framework in Frameworks */,
+				2C460D0C1E75FD15005D671D /* SwiftyJSON.framework in Frameworks */,
+				7390B581809754FF61C84CC2 /* Pods_Happy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C460CDB1E71E103005D671D /* MenuVC.swift */,
+				2C0FADF81E7DCDB800D4CEB7 /* MealListVC.swift */,
+				2C0FADFA1E7DCDEE00D4CEB7 /* SaleVC.swift */,
+				2C0FADFC1E7DCE3500D4CEB7 /* CartVC.swift */,
+				2C0FADFE1E7DCE5200D4CEB7 /* InfoVC.swift */,
+				2C0FAE001E7DCE5F00D4CEB7 /* SettingVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C460CCD1E71E103005D671D = {
+			isa = PBXGroup;
+			children = (
+				2C460CD81E71E103005D671D /* Happy */,
+				2C460CD71E71E103005D671D /* Products */,
+				2FEA529380B0F3F291174CE2 /* Pods */,
+				868464BBE620581160283B54 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C460CD71E71E103005D671D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C460CD61E71E103005D671D /* Happy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C460CD81E71E103005D671D /* Happy */ = {
+			isa = PBXGroup;
+			children = (
+				2C13A2311E829495007BB5D9 /* img1.png */,
+				2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */,
+				2C460D2C1E795C1C005D671D /* Helpers */,
+				2C460D291E784A2D005D671D /* Managers */,
+				2C460D191E780C06005D671D /* Protocols */,
+				2C460D0D1E780866005D671D /* Models */,
+				2C460D061E75FC32005D671D /* ServerManagers */,
+				2C460CD91E71E103005D671D /* AppDelegate.swift */,
+				2C460CDD1E71E103005D671D /* Main.storyboard */,
+				2C460CE31E71E103005D671D /* Assets.xcassets */,
+				2C460CE51E71E103005D671D /* LaunchScreen.storyboard */,
+				2C460CE81E71E103005D671D /* Info.plist */,
+				2C460CE01E71E103005D671D /* Happy.xcdatamodeld */,
+				2C13A2271E813B56007BB5D9 /* MealTBCell.swift */,
+				2C13A22F1E814552007BB5D9 /* MeallTVC.swift */,
+			);
+			path = Happy;
+			sourceTree = "<group>";
+		};
+		2C460D061E75FC32005D671D /* ServerManagers */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D071E75FC4B005D671D /* ProductManager.swift */,
+			);
+			name = ServerManagers;
+			sourceTree = "<group>";
+		};
+		2C460D0D1E780866005D671D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D161E780BB9005D671D /* Items */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2C460D161E780BB9005D671D /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D1D1E780C4C005D671D /* Pizza.swift */,
+				2C460D211E780F8F005D671D /* Meal.swift */,
+				2C460D231E781457005D671D /* PizzaOption.swift */,
+				2C460D271E784994005D671D /* Wok.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		2C460D191E780C06005D671D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D1A1E780C0E005D671D /* Items */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2C460D1A1E780C0E005D671D /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D1B1E780C22005D671D /* MealAbstractProtocol.swift */,
+				2C460D1F1E780CCE005D671D /* PizzaProtocol.swift */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		2C460D291E784A2D005D671D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D2A1E784A5B005D671D /* MenuManager.swift */,
+				2C460D2F1E7ABA6B005D671D /* ImageManager.swift */,
+				2C0FAE021E7DD0B000D4CEB7 /* CartManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2C460D2C1E795C1C005D671D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D2D1E795C26005D671D /* JSONTo.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2FEA529380B0F3F291174CE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06762D3C815A02CFAF10EAEE /* Pods-Happy.debug.xcconfig */,
+				D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		868464BBE620581160283B54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C460D091E75FD15005D671D /* Alamofire.framework */,
+				2C460D0A1E75FD15005D671D /* SwiftyJSON.framework */,
+				87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C460CD51E71E103005D671D /* Happy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C460CEB1E71E103005D671D /* Build configuration list for PBXNativeTarget "Happy" */;
+			buildPhases = (
+				BBEE9B48C45BE7ED4DCDAB15 /* [CP] Check Pods Manifest.lock */,
+				2C460CD21E71E103005D671D /* Sources */,
+				2C460CD31E71E103005D671D /* Frameworks */,
+				2C460CD41E71E103005D671D /* Resources */,
+				7E135BC028C5C514ED7DB90B /* [CP] Embed Pods Frameworks */,
+				8BAA3A62CFC725435E822914 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Happy;
+			productName = Happy;
+			productReference = 2C460CD61E71E103005D671D /* Happy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C460CCE1E71E103005D671D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Ivan Trofimov";
+				TargetAttributes = {
+					2C460CD51E71E103005D671D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = B5SWW93MKD;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2C460CD11E71E103005D671D /* Build configuration list for PBXProject "Happy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C460CCD1E71E103005D671D;
+			productRefGroup = 2C460CD71E71E103005D671D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C460CD51E71E103005D671D /* Happy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C460CD41E71E103005D671D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C460CE71E71E103005D671D /* LaunchScreen.storyboard in Resources */,
+				2C13A2321E829495007BB5D9 /* img1.png in Resources */,
+				2C460CE41E71E103005D671D /* Assets.xcassets in Resources */,
+				2C460CDF1E71E103005D671D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E135BC028C5C514ED7DB90B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Happy/Pods-Happy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BAA3A62CFC725435E822914 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Happy/Pods-Happy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBEE9B48C45BE7ED4DCDAB15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C460CD21E71E103005D671D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C460D1C1E780C22005D671D /* MealAbstractProtocol.swift in Sources */,
+				2C0FAE011E7DCE5F00D4CEB7 /* SettingVC.swift in Sources */,
+				2C460CDC1E71E103005D671D /* MenuVC.swift in Sources */,
+				2C0FADFB1E7DCDEE00D4CEB7 /* SaleVC.swift in Sources */,
+				2C460CDA1E71E103005D671D /* AppDelegate.swift in Sources */,
+				2C13A2291E813B56007BB5D9 /* MealTBCell.swift in Sources */,
+				2C13A2301E814552007BB5D9 /* MeallTVC.swift in Sources */,
+				2C460CE21E71E103005D671D /* Happy.xcdatamodeld in Sources */,
+				2C460D221E780F8F005D671D /* Meal.swift in Sources */,
+				2C460D1E1E780C4C005D671D /* Pizza.swift in Sources */,
+				2C460D201E780CCE005D671D /* PizzaProtocol.swift in Sources */,
+				2C0FADFF1E7DCE5200D4CEB7 /* InfoVC.swift in Sources */,
+				2C0FADF91E7DCDB800D4CEB7 /* MealListVC.swift in Sources */,
+				2C460D2B1E784A5B005D671D /* MenuManager.swift in Sources */,
+				2C0FADFD1E7DCE3500D4CEB7 /* CartVC.swift in Sources */,
+				2C460D2E1E795C26005D671D /* JSONTo.swift in Sources */,
+				2C460D281E784994005D671D /* Wok.swift in Sources */,
+				2C0FAE031E7DD0B000D4CEB7 /* CartManager.swift in Sources */,
+				2C460D241E781457005D671D /* PizzaOption.swift in Sources */,
+				2C460D081E75FC4B005D671D /* ProductManager.swift in Sources */,
+				2C460D301E7ABA6B005D671D /* ImageManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C460CDD1E71E103005D671D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C460CDE1E71E103005D671D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C460CE51E71E103005D671D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C460CE61E71E103005D671D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C460CE91E71E103005D671D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C460CEA1E71E103005D671D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C460CEC1E71E103005D671D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06762D3C815A02CFAF10EAEE /* Pods-Happy.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SWW93MKD;
+				INFOPLIST_FILE = Happy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Trofimov.Happy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2C460CED1E71E103005D671D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5SWW93MKD;
+				INFOPLIST_FILE = Happy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Trofimov.Happy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C460CD11E71E103005D671D /* Build configuration list for PBXProject "Happy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C460CE91E71E103005D671D /* Debug */,
+				2C460CEA1E71E103005D671D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2C460CEB1E71E103005D671D /* Build configuration list for PBXNativeTarget "Happy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C460CEC1E71E103005D671D /* Debug */,
+				2C460CED1E71E103005D671D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2C460CE01E71E103005D671D /* Happy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2C460CE11E71E103005D671D /* Happy.xcdatamodel */,
+			);
+			currentVersion = 2C460CE11E71E103005D671D /* Happy.xcdatamodel */;
+			path = Happy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2C460CCE1E71E103005D671D /* Project object */;
+}
