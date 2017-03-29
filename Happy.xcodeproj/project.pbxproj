@@ -34,6 +34,7 @@
 		2C460D2B1E784A5B005D671D /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2A1E784A5B005D671D /* MenuManager.swift */; };
 		2C460D2E1E795C26005D671D /* JSONTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2D1E795C26005D671D /* JSONTo.swift */; };
 		2C460D301E7ABA6B005D671D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2F1E7ABA6B005D671D /* ImageManager.swift */; };
+		2CD553481E89C00600603FEB /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD553471E89C00600603FEB /* head.png */; };
 		7390B581809754FF61C84CC2 /* Pods_Happy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		2C460D2A1E784A5B005D671D /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		2C460D2D1E795C26005D671D /* JSONTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTo.swift; sourceTree = "<group>"; };
 		2C460D2F1E7ABA6B005D671D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		2CD553471E89C00600603FEB /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
 		87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happy/Pods-Happy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 		2C460CD81E71E103005D671D /* Happy */ = {
 			isa = PBXGroup;
 			children = (
+				2CD553471E89C00600603FEB /* head.png */,
 				2C13A2311E829495007BB5D9 /* img1.png */,
 				2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */,
 				2C460D2C1E795C1C005D671D /* Helpers */,
@@ -287,6 +290,7 @@
 				2C13A2321E829495007BB5D9 /* img1.png in Resources */,
 				2C460CE41E71E103005D671D /* Assets.xcassets in Resources */,
 				2C460CDF1E71E103005D671D /* Main.storyboard in Resources */,
+				2CD553481E89C00600603FEB /* head.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

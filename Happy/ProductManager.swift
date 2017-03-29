@@ -12,18 +12,16 @@ import Alamofire
 import Spring
 
 class ProductManager {
-    func startLoading() {
-        print("Start loading")
-    }
-    func finishLoading() {
-        print("Finish loading")
-    }
+    public static var itemsAmount = 0
+    
+
     func call () {
         print("Menu download start")
         Alamofire.request("http://happyest.ru/getdata?type=0").responseJSON { response in
             if let JSON1 = response.result.value {
                 let json = JSON(JSON1)
                 for meal in json["a"] {
+                    ProductManager.itemsAmount += 1
                     do {
                         switch (meal.1["k"]){
                         case 0:
@@ -86,7 +84,7 @@ class ProductManager {
                 }
             }
         }
-        print("finish")
+        print("Finished. Total == \(ProductManager.itemsAmount)")
 
     }
 }

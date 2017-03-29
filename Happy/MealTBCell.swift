@@ -22,7 +22,8 @@ extension UIView {
 }
 
 class MealTBCell: UITableViewCell {
-
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var descript: UILabel!
@@ -30,7 +31,7 @@ class MealTBCell: UITableViewCell {
     @IBOutlet weak var mass: UILabel!
     
     @IBAction func stepper(_ sender: UIStepper) {
-        let vc = self.parentViewController as? MeallTVC
+        let vc = self.parentViewController as? MeallVC
         if ((vc) != nil) {
             vc!.showAdditionalView()
         } else {
@@ -41,12 +42,19 @@ class MealTBCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backView.backgroundColor = UIColor.gray
+        mainView.layer.cornerRadius = 10
+        backView.frame = CGRect(
+            x: backView.frame.maxX,
+            y: backView.frame.maxY,
+            width: backView.frame.width,
+            height: backView.frame.height - 20)
         // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
