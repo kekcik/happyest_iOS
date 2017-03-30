@@ -17,35 +17,21 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func hideButton(_ sender: UIButton) {
         animateOut()
     }
-    
-    func showAdditionalView () {
-        animateIn()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Счастье есть!"
         effect = blurView.effect
         blurView.effect = nil
     }
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - Table view data source
-    
 }
 
 
+
+/*
+ * TableView part of MeallVC
+ */
 extension MeallVC {
-    
-    /*
-     * TableView part of MeallVC
-     */
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 144
     }
@@ -73,14 +59,13 @@ extension MeallVC {
         print(MenuManager.getAllMeals()[indexPath.item].name)
         return cell
     }
-    
 }
 
+/*
+ *  Animation for additionalView
+ */
 extension MeallVC {
     
-    /*
-     *  Animation for additionalView
-     */
     
     func animateIn() {
         self.view.addSubview(blurView)
@@ -120,3 +105,5 @@ extension MeallVC {
         }
     }
 }
+
+

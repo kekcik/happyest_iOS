@@ -11,7 +11,6 @@ import UIKit
 
 class ImageManager {
     private static var mealMap : [String: UIImage] = [:]
-    
     func getImageWith(meal: Meal, cell: MealTBCell) {
         let name = meal.image
         if cell.title.text! != meal.name {

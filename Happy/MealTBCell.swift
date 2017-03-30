@@ -8,6 +8,9 @@
 
 import UIKit
 
+/*
+ *  It's a problem, man
+ */
 extension UIView {
     var parentViewController: UIViewController? {
         var parentResponder: UIResponder? = self
@@ -33,9 +36,9 @@ class MealTBCell: UITableViewCell {
     @IBAction func stepper(_ sender: UIStepper) {
         let vc = self.parentViewController as? MeallVC
         if ((vc) != nil) {
-            vc!.showAdditionalView()
+            vc!.animateIn()
         } else {
-            print("не ок")
+            print("problems with searcing parent VC")
         }
         amount.text = "\(Int(sender.value))"
     }

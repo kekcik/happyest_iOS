@@ -527,10 +527,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJt-np-bgn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Меню" id="RFm-1E-N0n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="LGh-bp-1x5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="LGh-bp-1x5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.83203631639480591" green="0.12340759485960007" blue="0.10613635927438736" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.83202296499999995" green="0.120872803" blue="0.1061509326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
