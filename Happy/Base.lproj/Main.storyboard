@@ -70,6 +70,9 @@
                                         <state key="normal" title="Бургеры">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cz0-Uu-QNd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-8r-zoo">
                                         <rect key="frame" x="200" y="0.0" width="190" height="113.33333333333333"/>
@@ -209,7 +212,7 @@
         <!--MeallVC-->
         <scene sceneID="zDY-G0-1Mi">
             <objects>
-                <viewController id="tjG-1c-LuR" customClass="MeallVC" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MeallVC" storyboardIdentifier="MeallVC" id="tjG-1c-LuR" customClass="MeallVC" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahL-gh-sXX"/>
                         <viewControllerLayoutGuide type="bottom" id="Wrg-pO-LjP"/>
@@ -456,7 +459,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1909" y="4762"/>
+            <point key="canvasLocation" x="-1778" y="4771"/>
         </scene>
         <!--SettingVC-->
         <scene sceneID="Zd9-ux-jtG">

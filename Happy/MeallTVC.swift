@@ -26,8 +26,6 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
-
 /*
  * TableView part of MeallVC
  */
@@ -62,11 +60,9 @@ extension MeallVC {
 }
 
 /*
- *  Animation for additionalView
+ *  Animation for additionalView. Part of MeallVC
  */
 extension MeallVC {
-    
-    
     func animateIn() {
         self.view.addSubview(blurView)
         self.view.addSubview(additionalView)
