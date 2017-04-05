@@ -394,20 +394,32 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzt-LE-WMR">
-                                                <rect key="frame" x="244" y="7" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="+"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzt-LE-WMR">
+                                                <rect key="frame" x="253" y="10" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="E74-Be-Uzz"/>
+                                                    <constraint firstAttribute="height" constant="25" id="UaS-1M-O3H"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="addButtonAction:" destination="m1i-Cz-s95" eventType="touchUpInside" id="ab4-Tu-W2A"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Какая-то хрень" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P11-pE-fCk">
-                                                <rect key="frame" x="65" y="11" width="123" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Какая-то добавкаъ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P11-pE-fCk">
+                                                <rect key="frame" x="65" y="11" width="152" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="kzt-LE-WMR" secondAttribute="trailing" constant="4" id="1st-IC-u0W"/>
+                                            <constraint firstItem="kzt-LE-WMR" firstAttribute="bottom" secondItem="ZQQ-lD-qz1" secondAttribute="bottomMargin" id="TMS-YO-sj6"/>
+                                        </constraints>
                                     </tableViewCellContentView>
+                                    <connections>
+                                        <outlet property="addButtonOutlet" destination="kzt-LE-WMR" id="2wd-c3-i0x"/>
+                                    </connections>
                                 </tableViewCell>
                             </prototypes>
                             <connections>

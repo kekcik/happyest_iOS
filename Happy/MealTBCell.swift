@@ -36,6 +36,7 @@ class MealTBCell: UITableViewCell {
     @IBAction func stepper(_ sender: UIStepper) {
         let vc = self.parentViewController as? MeallVC
         if ((vc) != nil) {
+            
             vc!.animateIn()
         } else {
             print("problems with searcing parent VC")
