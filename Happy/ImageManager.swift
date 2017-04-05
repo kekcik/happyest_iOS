@@ -41,20 +41,20 @@ class ImageManager {
         }
         DispatchQueue.global(qos: .background).async {
             let imgURL : NSURL? = NSURL(string: "https://happyest.ru/files/\(pName)?size=256")
-            if (imgURL == nil || imgURL as? URL == nil) {
+            if (imgURL == nil || imgURL as URL? == nil) {
                 #if DEBUG
                     print("Error downloading \(name)")
                 #endif
                 return
             }
-            let imgData : NSData? = (NSData(contentsOf: imgURL as! URL))
-            if (imgData == nil || imgData as? Data == nil || UIImage(data: imgData as! Data) == nil) {
+            let imgData : NSData? = (NSData(contentsOf: imgURL! as URL))
+            if (imgData == nil || imgData as Data? == nil || UIImage(data: imgData! as Data) == nil) {
                 #if DEBUG
                     print("Error downloading \(name)")
                 #endif
                 return
             }
-            let image = UIImage(data: imgData as! Data)!
+            let image = UIImage(data: imgData! as Data)!
             ImageManager.mealMap[pName] = image
             print("download for \(meal.name)")
             DispatchQueue.main.async {
