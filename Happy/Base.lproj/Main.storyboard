@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YzY-Ew-smh">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ftt-kp-7I4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P5m-jv-kEN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqx-le-aWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-607" y="4413"/>
+            <point key="canvasLocation" x="-608" y="4474"/>
         </scene>
         <!--InfoVC-->
         <scene sceneID="KLL-cL-goH">
@@ -38,7 +38,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZJB-mm-DVM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9qG-Ch-eUN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -57,14 +57,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q49-2y-Ifq">
-                                <rect key="frame" x="12" y="8" width="390" height="607"/>
+                                <rect key="frame" x="8" y="8" width="359" height="538"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-PT-nEA">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="113"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AgT-PT-nEA">
+                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Бургеры">
@@ -75,79 +75,103 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-8r-zoo">
-                                        <rect key="frame" x="200" y="0.0" width="190" height="113"/>
+                                        <rect key="frame" x="184.5" y="0.0" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Пицца">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tjG-1c-LuR" kind="show" id="xrS-LP-k5Z"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVA-Yb-b6a"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-OO-8Vy">
-                                        <rect key="frame" x="0.0" y="247" width="190" height="113"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-OO-8Vy">
+                                        <rect key="frame" x="0.0" y="219" width="174.5" height="100"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Вок">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R3u-gW-2CB"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-g6-IRU">
-                                        <rect key="frame" x="200" y="247" width="190" height="113"/>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jf-g6-IRU">
+                                        <rect key="frame" x="184.5" y="219" width="174.5" height="100"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Сеты">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RqB-Co-Dv4"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN1-NO-m5T">
-                                        <rect key="frame" x="0.0" y="123" width="190" height="114"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jN1-NO-m5T">
+                                        <rect key="frame" x="0.0" y="109.5" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Роллы">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xeg-lk-t02"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-np-pps">
-                                        <rect key="frame" x="0.0" y="370" width="190" height="114"/>
+                                        <rect key="frame" x="0.0" y="329" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Скидка дня">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="61Z-he-PoU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-cH-fcN">
-                                        <rect key="frame" x="200" y="370" width="190" height="114"/>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-cH-fcN">
+                                        <rect key="frame" x="184.5" y="329" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Соусы">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uvs-u2-1oA"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-h2-cRK">
-                                        <rect key="frame" x="200" y="494" width="190" height="113"/>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfC-h2-cRK">
+                                        <rect key="frame" x="184.5" y="438.5" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Напитки">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5OR-rt-bUS"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBq-D6-tro">
-                                        <rect key="frame" x="0.0" y="494" width="190" height="113"/>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBq-D6-tro">
+                                        <rect key="frame" x="0.0" y="438.5" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Закуски">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAj-Il-L3O"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2A-o4-xOW">
-                                        <rect key="frame" x="200" y="123" width="190" height="114"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2A-o4-xOW">
+                                        <rect key="frame" x="184.5" y="109.5" width="174.5" height="99.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Суши">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTK-45-OPL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -204,6 +228,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JVX-yK-m0K"/>
+                    <connections>
+                        <segue destination="tjG-1c-LuR" kind="show" id="tZ9-hr-Sfi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,22 +245,22 @@
                         <viewControllerLayoutGuide type="bottom" id="Wrg-pO-LjP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8Pg-Ub-74g" userLabel="TableView">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-gs-Tfr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                            <tableView clipsSubviews="YES" tag="111" contentMode="scaleToFill" restorationIdentifier="mealTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-gs-Tfr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mealCell" rowHeight="144" id="Glx-WP-aNz" customClass="MealTBCell" customModule="Happy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="144"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Glx-WP-aNz" id="7fW-Eg-eeC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-2i-g1G">
-                                                    <rect key="frame" x="4" y="4" width="406" height="135"/>
+                                                    <rect key="frame" x="4" y="4" width="367" height="135"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-iP-Anp">
                                                             <rect key="frame" x="8" y="8" width="128" height="119"/>
@@ -244,13 +271,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слехы Хиллари" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-Df-euE">
-                                                            <rect key="frame" x="144" y="8" width="254" height="22"/>
+                                                            <rect key="frame" x="144" y="8" width="215" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какое-то скучное и никому ненужное описаниедддодолдол" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5I-XP-YkM">
-                                                            <rect key="frame" x="144" y="34" width="254" height="39"/>
+                                                            <rect key="frame" x="144" y="34" width="215" height="57.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -262,13 +289,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7s-Fj-qAl">
-                                                            <rect key="frame" x="281" y="98" width="15" height="29"/>
+                                                            <rect key="frame" x="242" y="98" width="15" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZHd-Ap-qjb">
-                                                            <rect key="frame" x="304" y="98" width="94" height="29"/>
+                                                            <rect key="frame" x="265" y="98" width="94" height="29"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <connections>
                                                                 <action selector="stepper:" destination="Glx-WP-aNz" eventType="valueChanged" id="qv1-Yb-I9H"/>
@@ -328,6 +355,7 @@
                             <constraint firstAttribute="trailing" secondItem="nfq-gs-Tfr" secondAttribute="trailing" id="umj-7j-uvK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xfE-8v-LJL"/>
                     <connections>
                         <outlet property="additionalView" destination="6Nt-4n-5oy" id="lVe-nd-GpR"/>
                         <outlet property="blurView" destination="zzi-R1-JlC" id="lhl-BL-ass"/>
@@ -348,11 +376,11 @@
                     <rect key="frame" x="0.0" y="0.0" width="290" height="420"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBd-m6-eD2">
+                        <tableView clipsSubviews="YES" tag="222" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RBd-m6-eD2">
                             <rect key="frame" x="0.0" y="94" width="290" height="284"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <prototypes>
-                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" id="m1i-Cz-s95">
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ingredientCell" id="m1i-Cz-s95" customClass="IngredientCell" customModule="Happy" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="28" width="290" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m1i-Cz-s95" id="ZQQ-lD-qz1">
@@ -382,6 +410,10 @@
                                     </tableViewCellContentView>
                                 </tableViewCell>
                             </prototypes>
+                            <connections>
+                                <outlet property="dataSource" destination="tjG-1c-LuR" id="aMR-qg-KL5"/>
+                                <outlet property="delegate" destination="tjG-1c-LuR" id="bS0-CJ-afH"/>
+                            </connections>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jB5-Y9-pJH">
                             <rect key="frame" x="0.0" y="378" width="290" height="42"/>
@@ -459,7 +491,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-1778" y="4771"/>
+            <point key="canvasLocation" x="-1846" y="4810"/>
         </scene>
         <!--SettingVC-->
         <scene sceneID="Zd9-ux-jtG">
@@ -470,7 +502,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Cm-dR-syv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kwq-tW-h1W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -480,7 +512,7 @@
             </objects>
             <point key="canvasLocation" x="910" y="4413"/>
         </scene>
-        <!--Item-->
+        <!--Доставка-->
         <scene sceneID="63T-zt-EQg">
             <objects>
                 <viewController id="Fnq-u1-caX" customClass="SaleVC" customModule="Happy" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,11 +521,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Imb-GQ-H55"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FYt-Nf-Aj9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="8q5-P1-bXE"/>
+                    <tabBarItem key="tabBarItem" title="Доставка" image="orderIcon" selectedImage="orderIcon" id="8q5-P1-bXE"/>
                     <navigationItem key="navigationItem" id="gE7-ah-GFf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyr-X3-f6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -511,13 +543,14 @@
                         <color key="backgroundColor" red="0.83202296495437622" green="0.12087280303239822" blue="0.10615093261003494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.83202296495437622" green="0.12087280303239822" blue="0.10615093261003494" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="aJt-np-bgn" kind="relationship" relationship="viewControllers" id="LcV-0w-Rcn"/>
+                        <segue destination="Fnq-u1-caX" kind="relationship" relationship="viewControllers" id="EWb-Ol-jEL"/>
                         <segue destination="L1k-28-nAe" kind="relationship" relationship="viewControllers" id="J6w-u1-z9I"/>
                         <segue destination="fgy-Zn-Qd5" kind="relationship" relationship="viewControllers" id="pHO-eJ-aYG"/>
                         <segue destination="G4d-hp-Cv1" kind="relationship" relationship="viewControllers" id="QcH-Ju-f6t"/>
-                        <segue destination="Fnq-u1-caX" kind="relationship" relationship="viewControllers" id="EWb-Ol-jEL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJk-OE-g4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,7 +561,7 @@
         <scene sceneID="BWy-sH-Joa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aJt-np-bgn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Меню" id="RFm-1E-N0n"/>
+                    <tabBarItem key="tabBarItem" title="Меню" image="menuIcon" selectedImage="menuIcon" id="RFm-1E-N0n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="LGh-bp-1x5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -549,7 +582,7 @@
         <scene sceneID="jAX-n3-xoz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L1k-28-nAe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Корзина" id="She-Fn-Beo"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="cartIcon" selectedImage="cartIcon" id="She-Fn-Beo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X9z-rk-4du">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -562,13 +595,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbc-jn-HwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-607" y="3651"/>
+            <point key="canvasLocation" x="-607" y="3753"/>
         </scene>
         <!--Информация-->
         <scene sceneID="5x2-pw-dZ4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fgy-Zn-Qd5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Информация" id="ru9-eg-UGT"/>
+                    <tabBarItem key="tabBarItem" title="Информация" image="infoIcon" selectedImage="infoIcon" id="ru9-eg-UGT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SSe-eV-5Rt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -587,7 +620,7 @@
         <scene sceneID="nT9-kR-Gfx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G4d-hp-Cv1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Настройки" id="WDz-mO-JdL"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settingIcon" selectedImage="settingIcon" id="WDz-mO-JdL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RlS-VY-YQo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -604,6 +637,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cartIcon" width="25" height="25"/>
         <image name="head.png" width="32" height="155"/>
+        <image name="infoIcon" width="25" height="25"/>
+        <image name="menuIcon" width="25" height="25"/>
+        <image name="orderIcon" width="25" height="25"/>
+        <image name="settingIcon" width="25" height="25"/>
     </resources>
 </document>

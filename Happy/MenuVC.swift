@@ -17,9 +17,9 @@ class MenuVC: UIViewController {
     }
     
     @IBAction func categoryButton(_ sender: UIButton) {
-        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "MeallVC")
-        self.present(VC1, animated: false, completion: nil)
-      //  self.present(VC1, animated:true, completion: nil)
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "MeallVC") as! MeallVC
+        VC1.category = sender.tag
+        self.navigationController?.pushViewController(VC1, animated: true)
     }
 }
 

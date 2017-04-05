@@ -16,4 +16,13 @@ class MenuManager {
     static func getAllMeals() -> [Meal] {
         return meals
     }
+    static func getMealsFor(category: Int) -> [Meal] {
+        var localMeals:[Meal] = []
+        for meal in meals {
+            if meal.type == category {
+                localMeals += [meal]
+            }
+        }
+        return localMeals
+    }
 }

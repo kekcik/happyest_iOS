@@ -13,16 +13,32 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var mealTable: UITableView!
     @IBOutlet var blurView: UIVisualEffectView!
     var effect : UIVisualEffect?
-    
+    var category: Int = 0
+    var meals: [Meal] = []
     @IBAction func hideButton(_ sender: UIButton) {
         animateOut()
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initUI()
+        getMeals()
+    }
+    
+    
+}
+
+/*
+ * Custom Initialization
+ */
+extension MeallVC {
+    func initUI () {
         self.navigationItem.title = "Счастье есть!"
         effect = blurView.effect
         blurView.effect = nil
+    }
+    func getMeals () {
+        meals = MenuManager.getMealsFor(category: category)
     }
 }
 
@@ -31,7 +47,14 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
  */
 extension MeallVC {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 144
+        switch tableView.tag {
+        case 111:
+            return 144
+        case 222:
+            return 44
+        default:
+            return 44
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,20 +64,35 @@ extension MeallVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(MenuManager.getAllMeals().count)
-        return MenuManager.getAllMeals().count
+        return meals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch tableView.tag {
+        case 111:
+            return preinstallMealCellFor(tableView: tableView, indexPath: indexPath)
+        case 222:
+            return preinstallIngredientCellFor(tableView: tableView, indexPath:indexPath)
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func preinstallMealCellFor(tableView: UITableView, indexPath: IndexPath) -> MealTBCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! MealTBCell
-        cell.title.text = MenuManager.getAllMeals()[indexPath.item].name
-        cell.descript.text = MenuManager.getAllMeals()[indexPath.item].description
-        cell.mass.text = "\(MenuManager.getAllMeals()[indexPath.item].height) г."
+        cell.title.text = meals[indexPath.item].name
+        cell.descript.text = meals[indexPath.item].description
+        cell.mass.text = "\(meals[indexPath.item].height) г."
         cell.mainImage.image = UIImage(named: "img1.png")
         cell.selectionStyle = .none
         let im = ImageManager()
-        im.getImageWith(meal: MenuManager.getAllMeals()[indexPath.item], cell: cell)
-        print(MenuManager.getAllMeals()[indexPath.item].name)
+        im.getImageWith(meal: meals[indexPath.item], cell: cell)
+        print(meals[indexPath.item].name)
+        return cell
+    }
+    
+    func preinstallIngredientCellFor(tableView: UITableView, indexPath: IndexPath) -> IngredientCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientCell
         return cell
     }
 }

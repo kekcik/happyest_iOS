@@ -33,8 +33,10 @@
 		2C460D2B1E784A5B005D671D /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2A1E784A5B005D671D /* MenuManager.swift */; };
 		2C460D2E1E795C26005D671D /* JSONTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2D1E795C26005D671D /* JSONTo.swift */; };
 		2C460D301E7ABA6B005D671D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2F1E7ABA6B005D671D /* ImageManager.swift */; };
+		2C5513521E958A410004EA12 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5513511E958A410004EA12 /* TableViewCell.swift */; };
 		2C7163491E955C5D002B5EDF /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7163481E955C5D002B5EDF /* AppIcon.xcassets */; };
 		2CD553481E89C00600603FEB /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD553471E89C00600603FEB /* head.png */; };
+		2CE235661E9591E800F5E6A0 /* Elements.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE235651E9591E800F5E6A0 /* Elements.xcassets */; };
 		7390B581809754FF61C84CC2 /* Pods_Happy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +70,10 @@
 		2C460D2A1E784A5B005D671D /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		2C460D2D1E795C26005D671D /* JSONTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTo.swift; sourceTree = "<group>"; };
 		2C460D2F1E7ABA6B005D671D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		2C5513511E958A410004EA12 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		2C7163481E955C5D002B5EDF /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		2CD553471E89C00600603FEB /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		2CE235651E9591E800F5E6A0 /* Elements.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Elements.xcassets; sourceTree = "<group>"; };
 		87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happy/Pods-Happy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 		2C460CD81E71E103005D671D /* Happy */ = {
 			isa = PBXGroup;
 			children = (
+				2CE235641E9591D800F5E6A0 /* New Group */,
 				2CD553471E89C00600603FEB /* head.png */,
 				2C13A2311E829495007BB5D9 /* img1.png */,
 				2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */,
@@ -138,6 +143,8 @@
 				2C13A2271E813B56007BB5D9 /* MealTBCell.swift */,
 				2C13A22F1E814552007BB5D9 /* MeallTVC.swift */,
 				2C7163481E955C5D002B5EDF /* AppIcon.xcassets */,
+				2C5513511E958A410004EA12 /* TableViewCell.swift */,
+				2CE235651E9591E800F5E6A0 /* Elements.xcassets */,
 			);
 			path = Happy;
 			sourceTree = "<group>";
@@ -202,6 +209,13 @@
 				2C460D2D1E795C26005D671D /* JSONTo.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2CE235641E9591D800F5E6A0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		2FEA529380B0F3F291174CE2 /* Pods */ = {
@@ -286,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE235661E9591E800F5E6A0 /* Elements.xcassets in Resources */,
 				2C460CE71E71E103005D671D /* LaunchScreen.storyboard in Resources */,
 				2C7163491E955C5D002B5EDF /* AppIcon.xcassets in Resources */,
 				2C13A2321E829495007BB5D9 /* img1.png in Resources */,
@@ -366,6 +381,7 @@
 				2C0FADFD1E7DCE3500D4CEB7 /* CartVC.swift in Sources */,
 				2C460D2E1E795C26005D671D /* JSONTo.swift in Sources */,
 				2C460D281E784994005D671D /* Wok.swift in Sources */,
+				2C5513521E958A410004EA12 /* TableViewCell.swift in Sources */,
 				2C0FAE031E7DD0B000D4CEB7 /* CartManager.swift in Sources */,
 				2C460D241E781457005D671D /* PizzaOption.swift in Sources */,
 				2C460D081E75FC4B005D671D /* ProductManager.swift in Sources */,
