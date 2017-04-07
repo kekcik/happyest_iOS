@@ -25,6 +25,7 @@ extension UIView {
 }
 
 class MealTBCell: UITableViewCell {
+    var meal: Meal?
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var mainImage: UIImageView!
@@ -34,12 +35,14 @@ class MealTBCell: UITableViewCell {
     @IBOutlet weak var mass: UILabel!
     
     @IBAction func stepper(_ sender: UIStepper) {
-        let vc = self.parentViewController as? MeallVC
-        if ((vc) != nil) {
-            
-            vc!.animateIn()
-        } else {
-            print("problems with searcing parent VC")
+        CartManager.putMeal(maels: meal!)
+        if meal!.type == 3 || meal!.type == 0 {
+            let vc = self.parentViewController as? MeallVC
+            if ((vc) != nil) {
+                vc!.animateIn()
+            } else {
+                print("problems with searcing parent VC")
+            }
         }
         amount.text = "\(Int(sender.value))"
     }

@@ -13,13 +13,12 @@ import Spring
 
 class ProductManager {
     public static var itemsAmount = 0
-    
-
     func call () {
         print("Menu download start")
         Alamofire.request("http://happyest.ru/getdata?type=0").responseJSON { response in
             if let JSON1 = response.result.value {
                 let json = JSON(JSON1)
+                
                 for meal in json["a"] {
                     ProductManager.itemsAmount += 1
                     do {
@@ -82,9 +81,9 @@ class ProductManager {
                         print("ERROR: in serialization JSON")
                     }
                 }
+                print("Finished. Total == \(ProductManager.itemsAmount)")
             }
         }
-        print("Finished. Total == \(ProductManager.itemsAmount)")
 
     }
 }

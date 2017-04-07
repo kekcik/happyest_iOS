@@ -12,9 +12,14 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var additionalView: UIView!
     @IBOutlet var mealTable: UITableView!
     @IBOutlet var blurView: UIVisualEffectView!
+    
+    @IBOutlet var closeButton: UIButton!
+    
     var effect : UIVisualEffect?
     var category: Int = 0
+    var categoryTitle = ""
     var meals: [Meal] = []
+    
     @IBAction func hideButton(_ sender: UIButton) {
         animateOut()
     }
@@ -24,8 +29,6 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         initUI()
         getMeals()
     }
-    
-    
 }
 
 /*
@@ -33,7 +36,7 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
  */
 extension MeallVC {
     func initUI () {
-        self.navigationItem.title = "Счастье есть!"
+        self.navigationItem.title = categoryTitle
         effect = blurView.effect
         blurView.effect = nil
     }
@@ -85,20 +88,20 @@ extension MeallVC {
         }
     }
     
-    func preinstallMealCellFor(tableView: UITableView, indexPath: IndexPath) -> MealTBCell {
+    func preinstallMealCellFor(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! MealTBCell
         cell.title.text = meals[indexPath.item].name
         cell.descript.text = meals[indexPath.item].description
         cell.mass.text = "\(meals[indexPath.item].height) г."
         cell.mainImage.image = UIImage(named: "img1.png")
         cell.selectionStyle = .none
+        cell.meal = meals[indexPath.item]
         let im = ImageManager()
         im.getImageWith(meal: meals[indexPath.item], cell: cell)
-        print(meals[indexPath.item].name)
         return cell
     }
     
-    func preinstallIngredientCellFor(tableView: UITableView, indexPath: IndexPath) -> IngredientCell {
+    func preinstallIngredientCellFor(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientCell
         return cell
     }
@@ -111,25 +114,34 @@ extension MeallVC {
     func animateIn() {
         self.view.addSubview(blurView)
         self.view.addSubview(additionalView)
-        additionalView.layer.cornerRadius = 10
+        self.view.addSubview(closeButton)
         mealTable.isScrollEnabled = false
         blurView.frame = CGRect(
             x: self.view.frame.minX,
             y: self.view.frame.minY - 64,
             width: self.view.frame.width,
             height: self.view.frame.height)
-        
+        additionalView.clipsToBounds = true
+        additionalView.layer.cornerRadius = 10
         additionalView.center = CGPoint(
             x: self.view.center.x,
             y: self.view.center.y - 64)
-        
         additionalView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         additionalView.alpha = 0
         
+        closeButton.alpha = 0
+        closeButton.center = CGPoint(
+            x: self.view.center.x,
+            y: self.view.center.y + 180
+        )
+        closeButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+
         UIView.animate(withDuration: 0.4) {
             self.blurView.effect = self.effect
             self.additionalView.alpha = 1
+            self.closeButton.alpha = 1
             self.additionalView.transform = CGAffineTransform.identity
+            self.closeButton.transform = CGAffineTransform.identity
         }
     }
     
@@ -137,12 +149,14 @@ extension MeallVC {
         mealTable.isScrollEnabled = true
         UIView.animate(withDuration: 0.3, animations: {
             self.additionalView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            self.closeButton.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             self.additionalView.alpha = 0
+            self.closeButton.alpha = 0
             self.blurView.effect = nil
-            
         }) { (Bool) in
             self.additionalView.removeFromSuperview()
             self.blurView.removeFromSuperview()
+            self.closeButton.removeFromSuperview()
         }
     }
 }

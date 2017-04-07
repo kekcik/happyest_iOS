@@ -16,7 +16,6 @@ class ImageManager {
         if cell.title.text! != meal.name {
             return
         }
-        print("call for \(meal.name)")
         var letters = name.characters.map { String($0) }
         for i in 0...letters.count - 1 {
             if letters[i] == " " {
@@ -30,36 +29,30 @@ class ImageManager {
             }
             letters.removeLast()
         }
-        
         let pName = letters.joined()
-        
         if ImageManager.mealMap[pName] != nil {
             cell.mainImage.image = ImageManager.mealMap[pName]!
-            
-            print("from cache for \(meal.name)")
             return
         }
         DispatchQueue.global(qos: .background).async {
             let imgURL : NSURL? = NSURL(string: "https://happyest.ru/files/\(pName)?size=256")
             if (imgURL == nil || imgURL as URL? == nil) {
-                #if DEBUG
-                    print("Error downloading \(name)")
-                #endif
+                print("Error downloading \(name)")
                 return
             }
             let imgData : NSData? = (NSData(contentsOf: imgURL! as URL))
             if (imgData == nil || imgData as Data? == nil || UIImage(data: imgData! as Data) == nil) {
-                #if DEBUG
-                    print("Error downloading \(name)")
-                #endif
+                print("Error downloading \(name)")
                 return
             }
             let image = UIImage(data: imgData! as Data)!
             ImageManager.mealMap[pName] = image
-            print("download for \(meal.name)")
             DispatchQueue.main.async {
                 if cell.title.text! != meal.name {
                     return
+                }
+                if ImageManager.mealMap[pName] == nil {
+                    return self.getImageWith(meal: meal, cell: cell)
                 }
                 cell.mainImage.image = ImageManager.mealMap[pName]!
             }
