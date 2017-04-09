@@ -10,15 +10,27 @@ import UIKit
 
 class IngredientCell: UITableViewCell {
     @IBOutlet weak var addButtonOutlet: UIButton!
-    var select = false
     
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var title: UILabel!
+    
+    var select = false
+    var id = -1
+
     @IBAction func addButtonAction(_ sender: UIButton) {
-        if select {
+        print("press on \(id)")
+        let vc = self.parentViewController! as! MeallVC
+        vc.selectIngredientFor(id: id)
+        select = !select
+        checkSelection()
+    }
+    
+    func checkSelection() {
+        if !select {
             addButtonOutlet.setBackgroundImage(#imageLiteral(resourceName: "checkboxUnselect"), for: .normal)
         } else {
             addButtonOutlet.setBackgroundImage(#imageLiteral(resourceName: "checkboxSelect"), for: .normal)
         }
-        select = !select
     }
     
     override func awakeFromNib() {
@@ -27,7 +39,7 @@ class IngredientCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        addButtonOutlet.setBackgroundImage(#imageLiteral(resourceName: "checkboxUnselect"), for: .normal)
+        checkSelection()
     }
-
+    
 }

@@ -9,13 +9,17 @@
 import Foundation
 
 class MenuManager {
+    private static var ingredients: [Ingredient] = []
     private static var meals: [Meal] = []
+    
     static func putMeal(meal: Meal){
         meals.append(meal)
     }
+    
     static func getAllMeals() -> [Meal] {
         return meals
     }
+    
     static func getMealsFor(category: Int) -> [Meal] {
         var localMeals:[Meal] = []
         for meal in meals {
@@ -24,5 +28,13 @@ class MenuManager {
             }
         }
         return localMeals
+    }
+    
+    static func putIngredient(ing: Ingredient) {
+        ingredients.append(ing)
+    }
+    
+    static func getAllIngredients() -> [Ingredient] {
+        return ingredients
     }
 }

@@ -24,4 +24,9 @@ class Pizza: Meal {
             price: options.count == 0 ? 0 : options[0].price,
             height: options.count == 0 ? 0 : options[0].height)
     }
+    override func copy(with zone: NSZone? = nil) -> Any {
+        print("call pizza copies")
+        let copy = Pizza(name: name, description: description, id: id, type: type, image: image, available: available, additives: additives, options: options)
+        return copy
+    }
 }

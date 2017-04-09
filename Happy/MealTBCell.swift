@@ -35,14 +35,17 @@ class MealTBCell: UITableViewCell {
     @IBOutlet weak var mass: UILabel!
     
     @IBAction func stepper(_ sender: UIStepper) {
-        CartManager.putMeal(maels: meal!)
         if meal!.type == 3 || meal!.type == 0 {
             let vc = self.parentViewController as? MeallVC
             if ((vc) != nil) {
+                vc!.currentMeal = meal
+                vc!.initAdditionalView()
                 vc!.animateIn()
             } else {
                 print("problems with searcing parent VC")
             }
+        } else {
+            CartManager.putMeal(maels: meal!)
         }
         amount.text = "\(Int(sender.value))"
     }
@@ -50,7 +53,7 @@ class MealTBCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.backgroundColor = UIColor.gray
-        mainView.layer.cornerRadius = 10
+        //mainView.layer.cornerRadius = 10
         backView.frame = CGRect(
             x: backView.frame.maxX,
             y: backView.frame.maxY,

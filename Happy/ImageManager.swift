@@ -11,12 +11,15 @@ import UIKit
 
 class ImageManager {
     private static var mealMap : [String: UIImage] = [:]
-    func getImageWith(meal: Meal, cell: MealTBCell) {
-        let name = meal.image
-        if cell.title.text! != meal.name {
-            return
-        }
-        var letters = name.characters.map { String($0) }
+    
+    
+    func getImageFromMap(meal: Meal) -> UIImage? {
+        let name = parseName(str: meal.image)
+        return ImageManager.mealMap[name]
+    }
+    
+    private func parseName (str: String) -> String{
+        var letters = str.characters.map { String($0) }
         for i in 0...letters.count - 1 {
             if letters[i] == " " {
                 letters[i] = "%20"
@@ -29,7 +32,15 @@ class ImageManager {
             }
             letters.removeLast()
         }
-        let pName = letters.joined()
+        return letters.joined()
+    }
+    
+    func getImageWith(meal: Meal, cell: MealTBCell) {
+        let name = meal.image
+        if cell.title.text! != meal.name {
+            return
+        }
+        let pName = parseName(str: name)
         if ImageManager.mealMap[pName] != nil {
             cell.mainImage.image = ImageManager.mealMap[pName]!
             return

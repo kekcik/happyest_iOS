@@ -12,9 +12,16 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var additionalView: UIView!
     @IBOutlet var mealTable: UITableView!
     @IBOutlet var blurView: UIVisualEffectView!
-    
     @IBOutlet var closeButton: UIButton!
     
+    @IBOutlet weak var ingredientTable: UITableView!
+    @IBOutlet weak var mealImg: UIImageView!
+    @IBOutlet weak var mealTtitle: UILabel!
+    @IBOutlet weak var mealPrice: UILabel!
+    
+    var currentMeal: Meal?
+    var localIngredients : [(Ingredient, Bool)] = []
+
     var effect : UIVisualEffect?
     var category: Int = 0
     var categoryTitle = ""
@@ -24,10 +31,50 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         animateOut()
     }
     
+    @IBAction func addInCart(_ sender: UIButton) {
+        var copyIng : [Int] = []
+        for ing in localIngredients {
+            if ing.1 {
+                copyIng += [ing.0.id]
+            }
+        }
+        if currentMeal!.type == 0 {
+            let pizza = currentMeal!.copy() as! Pizza
+            pizza.additives = copyIng
+            CartManager.putMeal(maels: pizza)
+        } else {
+            let wok = currentMeal!.copy() as! Wok
+            wok.additives = copyIng
+            CartManager.putMeal(maels: wok)
+        }
+        animateOut()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
         getMeals()
+    }
+    
+    func addIngredients(ing: [Int]) {
+        print("update ingredietns")
+        localIngredients = []
+        let ingredients = MenuManager.getAllIngredients()
+        for ing in ingredients {
+            localIngredients += [(ing, false)]
+        }
+    }
+    
+    func selectIngredientFor(id: Int) {
+        print("call selectIngredientFor for \(id)")
+        for i in 0 ... localIngredients.count - 1 {
+            let ing = localIngredients[i]
+            if ing.0.id == id {
+                print("find for \(id)")
+                localIngredients[i].1 = !localIngredients[i].1
+                break
+            }
+        }
     }
 }
 
@@ -71,7 +118,16 @@ extension MeallVC {
         case 111:
             return meals.count
         case 222:
-            return meals.count
+            switch currentMeal!.type {
+            case 0:
+                let pizza = currentMeal! as! Pizza
+                return pizza.additives.count
+            case 3:
+                let wok = currentMeal! as! Wok
+                return wok.additives.count
+            default:
+                return 0
+            }
         default:
             return 0
         }
@@ -103,14 +159,34 @@ extension MeallVC {
     
     func preinstallIngredientCellFor(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientCell
+        cell.select = localIngredients[indexPath.item].1
+        cell.title.text = localIngredients[indexPath.item].0.title
+        cell.price.text = "\(localIngredients[indexPath.item].0.price)₽"
+        cell.id = localIngredients[indexPath.item].0.id
+        cell.checkSelection()
         return cell
     }
 }
 
 /*
- *  Animation for additionalView. Part of MeallVC
+ *  Animation and init for additionalView. Part of MeallVC
  */
+
 extension MeallVC {
+    func initAdditionalView() {
+        let im = ImageManager()
+        if currentMeal!.type == 0 {
+            let pizza = currentMeal! as! Pizza
+            addIngredients(ing: pizza.additives)
+        } else {
+            let wok = currentMeal! as! Wok
+            addIngredients(ing: wok.additives)
+        }
+        mealImg.image = im.getImageFromMap(meal: currentMeal!)
+        mealPrice.text = "\(currentMeal!.price)₽"
+        mealTtitle.text = currentMeal!.name
+        ingredientTable.reloadData()
+    }
     func animateIn() {
         self.view.addSubview(blurView)
         self.view.addSubview(additionalView)

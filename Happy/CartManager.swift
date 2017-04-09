@@ -26,12 +26,21 @@ class CartManager {
     
     static func getCart() -> [(m: Meal, a: Int, id: UUID)] {
         cartInArr.removeAll()
+        
         for el in cartInDic {
             cartInArr += [(m: el.value.m, a: el.value.a, el.key)]
         }
+        
         cartInArr.sort { (a, b) -> Bool in
+            if ((a.m as? Pizza) != nil) && ((b.m as? Pizza) != nil){
+                print("pizza copies")
+                return
+                    ObjectIdentifier(a.m as! Pizza).hashValue <
+                        ObjectIdentifier(b.m as! Pizza).hashValue
+            }
             return ObjectIdentifier(a.m).hashValue < ObjectIdentifier(b.m).hashValue
         }
+        
         if cartInArr.count > 1 {
             var needToUpdate = false
             for i in 0 ... (cartInArr.count - 2) {
@@ -49,7 +58,6 @@ class CartManager {
         }
         
         return cartInArr
-        
     }
     
     private static func union(a: UUID, b: UUID) {

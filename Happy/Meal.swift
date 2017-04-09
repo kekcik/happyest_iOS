@@ -29,5 +29,17 @@ class Meal {
         self.image = image
         self.price = price
         self.height = height
+    
     }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        print("call meals copies")
+        let copy = Meal(name: name, description: description, id: id, type: type, image: image, available: available, price: price, height: height)
+        return copy
+    }
+    
+    
+//    func <= <T ()left: inout T, right: T?)()()()()() {
+//        // do stuff here
+//    }
 }

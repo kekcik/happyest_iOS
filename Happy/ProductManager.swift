@@ -18,7 +18,19 @@ class ProductManager {
         Alamofire.request("http://happyest.ru/getdata?type=0").responseJSON { response in
             if let JSON1 = response.result.value {
                 let json = JSON(JSON1)
-                
+                for ingredient in json["l"] {
+                    do {
+                        let id = try JSONTo.int(json: ingredient.1["j"])
+                        let price = try JSONTo.int(json: ingredient.1["f"])
+                        let title = try JSONTo.string(json: ingredient.1["o"])
+                        MenuManager.putIngredient(ing: Ingredient(
+                            id: id,
+                            price: price,
+                            title: title))
+                    } catch {
+                        print("Error in parsing ingredients")
+                    }
+                }
                 for meal in json["a"] {
                     ProductManager.itemsAmount += 1
                     do {
@@ -84,6 +96,5 @@ class ProductManager {
                 print("Finished. Total == \(ProductManager.itemsAmount)")
             }
         }
-
     }
 }

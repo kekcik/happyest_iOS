@@ -18,6 +18,7 @@
 		2C13A2321E829495007BB5D9 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C13A2311E829495007BB5D9 /* img1.png */; };
 		2C2304D41E97E6B40059470F /* ItemInCartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2304D31E97E6B40059470F /* ItemInCartViewCell.swift */; };
 		2C2304D61E97FBDE0059470F /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2304D51E97FBDE0059470F /* CategoryManager.swift */; };
+		2C2304D81E99262A0059470F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2304D71E99262A0059470F /* Ingredient.swift */; };
 		2C460CDA1E71E103005D671D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460CD91E71E103005D671D /* AppDelegate.swift */; };
 		2C460CDC1E71E103005D671D /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460CDB1E71E103005D671D /* MenuVC.swift */; };
 		2C460CDF1E71E103005D671D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C460CDD1E71E103005D671D /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		2C13A2311E829495007BB5D9 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
 		2C2304D31E97E6B40059470F /* ItemInCartViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInCartViewCell.swift; sourceTree = "<group>"; };
 		2C2304D51E97FBDE0059470F /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
+		2C2304D71E99262A0059470F /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		2C460CD61E71E103005D671D /* Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C460CD91E71E103005D671D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Happy/AppDelegate.swift; sourceTree = "<group>"; };
 		2C460CDB1E71E103005D671D /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				2C460D211E780F8F005D671D /* Meal.swift */,
 				2C460D231E781457005D671D /* PizzaOption.swift */,
 				2C460D271E784994005D671D /* Wok.swift */,
+				2C2304D71E99262A0059470F /* Ingredient.swift */,
 			);
 			name = Items;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2304D81E99262A0059470F /* Ingredient.swift in Sources */,
 				2C460D1C1E780C22005D671D /* MealAbstractProtocol.swift in Sources */,
 				2C0FAE011E7DCE5F00D4CEB7 /* SettingVC.swift in Sources */,
 				2C460CDC1E71E103005D671D /* MenuVC.swift in Sources */,

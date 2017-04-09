@@ -57,8 +57,9 @@ extension CartVC {
         let localMeal = localMeals[indexPath.item]
         cell.title.text = localMeal.m.name
         cell.descript.text = CategoryManager.getCategoryFor(type: localMeal.m.type)
-        cell.priceForOne.text = String(localMeal.m.price) + " ₽"
-        cell.priceForAll.text = String(localMeal.m.price * localMeal.a) + " ₽"
+        let price = localMeal.m.price
+        cell.priceForOne.text = String(price) + "₽"
+        cell.priceForAll.text = String(price * localMeal.a) + "₽"
         cell.id = localMeal.id
         cell.stepperCount.text = String(localMeal.a)
         return cell
