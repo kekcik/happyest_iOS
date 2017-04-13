@@ -9,14 +9,16 @@
 import Foundation
 
 class CartManager {
-    private static var cartInDic = Dictionary<UUID, (m: Meal, a: Int)>()
-    private static var cartInArr = [(m: Meal, a: Int, id: UUID)]()
-    private static var totalPrice = 0
-    static func putMeal(maels: Meal) {
+    static let sh = CartManager() // shared instance
+    private init() {}
+    private var cartInDic = Dictionary<UUID, (m: Meal, a: Int)>()
+    private var cartInArr = [(m: Meal, a: Int, id: UUID)]()
+    private var totalPrice = 0
+    func putMeal(maels: Meal) {
         cartInDic[UUID()] = (m: maels, a: 1)
     }
     
-    static func getPrice() -> Int {
+    func getPrice() -> Int {
         totalPrice = 0
         for el in cartInDic {
             totalPrice += el.value.m.price * el.value.a
@@ -24,7 +26,7 @@ class CartManager {
         return totalPrice
     }
     
-    static func getCart() -> [(m: Meal, a: Int, id: UUID)] {
+    func getCart() -> [(m: Meal, a: Int, id: UUID)] {
         cartInArr.removeAll()
         
         for el in cartInDic {
@@ -60,19 +62,19 @@ class CartManager {
         return cartInArr
     }
     
-    private static func union(a: UUID, b: UUID) {
+    private func union(a: UUID, b: UUID) {
         cartInDic[a]!.a += cartInDic[b]!.a
         cartInDic.removeValue(forKey: b)
     }
     
-    static func incMealFor(id: UUID) {
+    func incMealFor(id: UUID) {
         let meal = cartInDic[id]
         if meal != nil {
             cartInDic.updateValue((m: meal!.m, a: meal!.a + 1), forKey: id)
         }
     }
     
-    static func decMealFor(id: UUID) {
+    func decMealFor(id: UUID) {
         let meal = cartInDic[id]
         if meal != nil {
             cartInDic.updateValue((m: meal!.m, a: meal!.a - 1), forKey: id)

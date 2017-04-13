@@ -23,7 +23,7 @@ class ProductManager {
                         let id = try JSONTo.int(json: ingredient.1["j"])
                         let price = try JSONTo.int(json: ingredient.1["f"])
                         let title = try JSONTo.string(json: ingredient.1["o"])
-                        MenuManager.putIngredient(ing: Ingredient(
+                        MenuManager.sh.putIngredient(ing: Ingredient(
                             id: id,
                             price: price,
                             title: title))
@@ -56,7 +56,7 @@ class ProductManager {
                                 available: try JSONTo.bool(json: meal.1["E"]),
                                 additives: adds,
                                 options: opts)
-                            MenuManager.putMeal(meal: meal)
+                            MenuManager.sh.putMeal(meal: meal)
                             break
                         case 3:
                             var adds = [Int]()
@@ -73,7 +73,7 @@ class ProductManager {
                                 price: try JSONTo.int(json: meal.1["f"]),
                                 height: try JSONTo.int(json: meal.1["h"]),
                                 additives: adds)
-                            MenuManager.putMeal(meal: meal)
+                            MenuManager.sh.putMeal(meal: meal)
                             
                             break
                         default:
@@ -86,7 +86,7 @@ class ProductManager {
                                 available: try JSONTo.bool(json: meal.1["E"]),
                                 price: try JSONTo.int(json: meal.1["f"]),
                                 height: try JSONTo.int(json: meal.1["h"]))
-                            MenuManager.putMeal(meal: meal)
+                            MenuManager.sh.putMeal(meal: meal)
                             break;
                         }
                     } catch {

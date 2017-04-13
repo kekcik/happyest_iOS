@@ -25,8 +25,8 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateCart() {
-        localMeals = CartManager.getCart()
-        totalPrice = CartManager.getPrice()
+        localMeals = CartManager.sh.getCart()
+        totalPrice = CartManager.sh.getPrice()
         orderOutlet.setTitle("Заказать за \(totalPrice) рублей", for: .normal)
         cartTable.reloadData()
     }
@@ -56,11 +56,12 @@ extension CartVC {
         let cell = tableView.dequeueReusableCell(withIdentifier: "itemInCart") as! ItemInCartViewCell
         let localMeal = localMeals[indexPath.item]
         cell.title.text = localMeal.m.name
-        cell.descript.text = CategoryManager.getCategoryFor(type: localMeal.m.type)
+        cell.descript.text = CategoryManager.sh.getCategoryFor(type: localMeal.m.type)
         let price = localMeal.m.price
         cell.priceForOne.text = String(price) + "₽"
         cell.priceForAll.text = String(price * localMeal.a) + "₽"
         cell.id = localMeal.id
+        cell.selectionStyle = .none
         cell.stepperCount.text = String(localMeal.a)
         return cell
     }

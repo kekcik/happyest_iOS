@@ -9,18 +9,21 @@
 import Foundation
 
 class MenuManager {
-    private static var ingredients: [Ingredient] = []
-    private static var meals: [Meal] = []
+    static let sh = MenuManager() //shared instance
     
-    static func putMeal(meal: Meal){
+    private init() {}
+    private var ingredients: [Ingredient] = []
+    private var meals: [Meal] = []
+    
+    func putMeal(meal: Meal){
         meals.append(meal)
     }
     
-    static func getAllMeals() -> [Meal] {
+    func getAllMeals() -> [Meal] {
         return meals
     }
     
-    static func getMealsFor(category: Int) -> [Meal] {
+    func getMealsFor(category: Int) -> [Meal] {
         var localMeals:[Meal] = []
         for meal in meals {
             if meal.type == category {
@@ -30,11 +33,11 @@ class MenuManager {
         return localMeals
     }
     
-    static func putIngredient(ing: Ingredient) {
+    func putIngredient(ing: Ingredient) {
         ingredients.append(ing)
     }
     
-    static func getAllIngredients() -> [Ingredient] {
+    func getAllIngredients() -> [Ingredient] {
         return ingredients
     }
 }

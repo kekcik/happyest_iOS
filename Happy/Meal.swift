@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Meal {
+class Meal: NSCopying {
     var name: String
     var description: String
     var id: Int

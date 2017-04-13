@@ -12,7 +12,6 @@ import UIKit
 class ImageManager {
     private static var mealMap : [String: UIImage] = [:]
     
-    
     func getImageFromMap(meal: Meal) -> UIImage? {
         let name = parseName(str: meal.image)
         return ImageManager.mealMap[name]
@@ -42,6 +41,7 @@ class ImageManager {
         }
         let pName = parseName(str: name)
         if ImageManager.mealMap[pName] != nil {
+            cell.backgroundImage.image = ImageManager.mealMap[pName]!
             cell.mainImage.image = ImageManager.mealMap[pName]!
             return
         }
@@ -65,6 +65,7 @@ class ImageManager {
                 if ImageManager.mealMap[pName] == nil {
                     return self.getImageWith(meal: meal, cell: cell)
                 }
+                cell.backgroundImage.image = ImageManager.mealMap[pName]!
                 cell.mainImage.image = ImageManager.mealMap[pName]!
             }
         }

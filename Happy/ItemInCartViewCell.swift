@@ -28,10 +28,10 @@ class ItemInCartViewCell: UITableViewCell {
 
     @IBAction func stepperButton(_ sender: UIButton) {
         if sender.tag == 117 {
-            CartManager.decMealFor(id: id)
+            CartManager.sh.decMealFor(id: id)
             print("dec")
         } else {
-            CartManager.incMealFor(id: id)
+            CartManager.sh.incMealFor(id: id)
             print("inc")
         }
         let vc = self.parentViewController as! CartVC

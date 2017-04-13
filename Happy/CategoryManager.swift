@@ -9,7 +9,9 @@
 import Foundation
 
 class CategoryManager {
-    static func getCategoryFor(type: Int) -> String {
+    static let sh = CategoryManager()
+    private init() {}
+    func getCategoryFor(type: Int) -> String {
         switch type {
         case 0:
             return "Пицца"

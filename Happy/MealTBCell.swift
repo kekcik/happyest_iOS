@@ -33,6 +33,23 @@ class MealTBCell: UITableViewCell {
     @IBOutlet weak var descript: UILabel!
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var mass: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        if meal!.type == 3 || meal!.type == 0 {
+            let vc = self.parentViewController as? MeallVC
+            if ((vc) != nil) {
+                vc!.currentMeal = meal
+                vc!.initAdditionalView()
+                vc!.animateIn()
+            } else {
+                print("problems with searcing parent VC")
+            }
+        } else {
+            CartManager.sh.putMeal(maels: meal!)
+        }
+    }
     
     @IBAction func stepper(_ sender: UIStepper) {
         if meal!.type == 3 || meal!.type == 0 {
@@ -45,20 +62,15 @@ class MealTBCell: UITableViewCell {
                 print("problems with searcing parent VC")
             }
         } else {
-            CartManager.putMeal(maels: meal!)
+            CartManager.sh.putMeal(maels: meal!)
         }
         amount.text = "\(Int(sender.value))"
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backView.backgroundColor = UIColor.gray
-        //mainView.layer.cornerRadius = 10
-        backView.frame = CGRect(
-            x: backView.frame.maxX,
-            y: backView.frame.maxY,
-            width: backView.frame.width,
-            height: backView.frame.height - 20)
+        backView.layer.cornerRadius = 8
+        backView.clipsToBounds = true
         // Initialization code
     }
 

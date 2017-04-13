@@ -38,8 +38,8 @@
 		2C460D301E7ABA6B005D671D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C460D2F1E7ABA6B005D671D /* ImageManager.swift */; };
 		2C5513521E958A410004EA12 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5513511E958A410004EA12 /* IngredientCell.swift */; };
 		2C7163491E955C5D002B5EDF /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7163481E955C5D002B5EDF /* AppIcon.xcassets */; };
+		2C750B661E9A852F002D6A52 /* Elements.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C750B651E9A852F002D6A52 /* Elements.xcassets */; };
 		2CD553481E89C00600603FEB /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CD553471E89C00600603FEB /* head.png */; };
-		2CE235661E9591E800F5E6A0 /* Elements.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE235651E9591E800F5E6A0 /* Elements.xcassets */; };
 		7390B581809754FF61C84CC2 /* Pods_Happy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		2C2304D51E97FBDE0059470F /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		2C2304D71E99262A0059470F /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		2C460CD61E71E103005D671D /* Happy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C460CD91E71E103005D671D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Happy/AppDelegate.swift; sourceTree = "<group>"; };
+		2C460CD91E71E103005D671D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C460CDB1E71E103005D671D /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		2C460CDE1E71E103005D671D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C460CE11E71E103005D671D /* Happy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy.xcdatamodel; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		2C460D2F1E7ABA6B005D671D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		2C5513511E958A410004EA12 /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		2C7163481E955C5D002B5EDF /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		2C750B651E9A852F002D6A52 /* Elements.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Elements.xcassets; sourceTree = "<group>"; };
 		2CD553471E89C00600603FEB /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
-		2CE235651E9591E800F5E6A0 /* Elements.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Elements.xcassets; sourceTree = "<group>"; };
 		87C06AFC494AB32E8C43FAAA /* Pods_Happy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03BF10B14D1D7B2CD093336 /* Pods-Happy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happy/Pods-Happy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,6 @@
 		2C460CCD1E71E103005D671D = {
 			isa = PBXGroup;
 			children = (
-				2C460CD91E71E103005D671D /* AppDelegate.swift */,
 				2C460CD81E71E103005D671D /* Happy */,
 				2C460CD71E71E103005D671D /* Products */,
 				2FEA529380B0F3F291174CE2 /* Pods */,
@@ -134,21 +133,22 @@
 		2C460CD81E71E103005D671D /* Happy */ = {
 			isa = PBXGroup;
 			children = (
-				2CE235641E9591D800F5E6A0 /* Cells */,
+				2C460CE81E71E103005D671D /* Info.plist */,
 				2CD553471E89C00600603FEB /* head.png */,
 				2C13A2311E829495007BB5D9 /* img1.png */,
-				2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */,
+				2C460CD91E71E103005D671D /* AppDelegate.swift */,
+				2C7163481E955C5D002B5EDF /* AppIcon.xcassets */,
+				2C750B651E9A852F002D6A52 /* Elements.xcassets */,
+				2C460CE01E71E103005D671D /* Happy.xcdatamodeld */,
+				2C460CE51E71E103005D671D /* LaunchScreen.storyboard */,
+				2C460CDD1E71E103005D671D /* Main.storyboard */,
+				2CE235641E9591D800F5E6A0 /* Cells */,
 				2C460D2C1E795C1C005D671D /* Helpers */,
 				2C460D291E784A2D005D671D /* Managers */,
-				2C460D191E780C06005D671D /* Protocols */,
 				2C460D0D1E780866005D671D /* Models */,
+				2C460D191E780C06005D671D /* Protocols */,
 				2C460D061E75FC32005D671D /* ServerManagers */,
-				2C460CDD1E71E103005D671D /* Main.storyboard */,
-				2C460CE51E71E103005D671D /* LaunchScreen.storyboard */,
-				2C460CE81E71E103005D671D /* Info.plist */,
-				2C460CE01E71E103005D671D /* Happy.xcdatamodeld */,
-				2C7163481E955C5D002B5EDF /* AppIcon.xcassets */,
-				2CE235651E9591E800F5E6A0 /* Elements.xcassets */,
+				2C0FADF71E7DCD9600D4CEB7 /* ViewControllers */,
 			);
 			path = Happy;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE235661E9591E800F5E6A0 /* Elements.xcassets in Resources */,
+				2C750B661E9A852F002D6A52 /* Elements.xcassets in Resources */,
 				2C460CE71E71E103005D671D /* LaunchScreen.storyboard in Resources */,
 				2C7163491E955C5D002B5EDF /* AppIcon.xcassets in Resources */,
 				2C13A2321E829495007BB5D9 /* img1.png in Resources */,
@@ -524,10 +524,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SWW93MKD;
 				INFOPLIST_FILE = Happy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trofimov.Happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -539,10 +541,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5SWW93MKD;
 				INFOPLIST_FILE = Happy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Trofimov.Happy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -41,11 +41,11 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if currentMeal!.type == 0 {
             let pizza = currentMeal!.copy() as! Pizza
             pizza.additives = copyIng
-            CartManager.putMeal(maels: pizza)
+            CartManager.sh.putMeal(maels: pizza)
         } else {
             let wok = currentMeal!.copy() as! Wok
             wok.additives = copyIng
-            CartManager.putMeal(maels: wok)
+            CartManager.sh.putMeal(maels: wok)
         }
         animateOut()
     }
@@ -59,7 +59,7 @@ class MeallVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func addIngredients(ing: [Int]) {
         print("update ingredietns")
         localIngredients = []
-        let ingredients = MenuManager.getAllIngredients()
+        let ingredients = MenuManager.sh.getAllIngredients()
         for ing in ingredients {
             localIngredients += [(ing, false)]
         }
@@ -88,7 +88,7 @@ extension MeallVC {
         blurView.effect = nil
     }
     func getMeals () {
-        meals = MenuManager.getMealsFor(category: category)
+        meals = MenuManager.sh.getMealsFor(category: category)
     }
 }
 
@@ -99,7 +99,7 @@ extension MeallVC {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch tableView.tag {
         case 111:
-            return 144
+            return 180
         case 222:
             return 44
         default:
@@ -145,11 +145,12 @@ extension MeallVC {
     }
     
     func preinstallMealCellFor(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") as! MealTBCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newPizzaCell") as! MealTBCell
         cell.title.text = meals[indexPath.item].name
         cell.descript.text = meals[indexPath.item].description
-        cell.mass.text = "\(meals[indexPath.item].height) г."
+        //cell.mass.text = "\(meals[indexPath.item].height) г."
         cell.mainImage.image = UIImage(named: "img1.png")
+        //cell.backgroundImage.image = UIImage(named: "img1.png")
         cell.selectionStyle = .none
         cell.meal = meals[indexPath.item]
         let im = ImageManager()
@@ -164,6 +165,7 @@ extension MeallVC {
         cell.price.text = "\(localIngredients[indexPath.item].0.price)₽"
         cell.id = localIngredients[indexPath.item].0.id
         cell.checkSelection()
+        cell.selectionStyle = .none
         return cell
     }
 }
@@ -171,7 +173,6 @@ extension MeallVC {
 /*
  *  Animation and init for additionalView. Part of MeallVC
  */
-
 extension MeallVC {
     func initAdditionalView() {
         let im = ImageManager()
@@ -184,7 +185,7 @@ extension MeallVC {
         }
         mealImg.image = im.getImageFromMap(meal: currentMeal!)
         mealPrice.text = "\(currentMeal!.price)₽"
-        mealTtitle.text = currentMeal!.name
+        //mealTtitle.text = currentMeal!.name
         ingredientTable.reloadData()
     }
     func animateIn() {
@@ -236,5 +237,3 @@ extension MeallVC {
         }
     }
 }
-
-
