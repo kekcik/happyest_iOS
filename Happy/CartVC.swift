@@ -17,11 +17,14 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var localMeals = [(m: Meal, a: Int, id: UUID)]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        cartTable.separatorStyle = UITableViewCellSeparatorStyle.none;
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateCart()
+        
     }
     
     func updateCart() {
@@ -35,7 +38,8 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 extension CartVC {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
+        //return 64
+        return 170
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,7 +49,7 @@ extension CartVC {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return localMeals.count
+        return localMeals.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,13 +57,18 @@ extension CartVC {
     }
     
     func preinstallItemInCartCellFor(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "itemInCart") as! ItemInCartViewCell
+        if indexPath.item == localMeals.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "resultCell")!
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newItemInCart") as! ItemInCartViewCell
         let localMeal = localMeals[indexPath.item]
         cell.title.text = localMeal.m.name
         cell.descript.text = CategoryManager.sh.getCategoryFor(type: localMeal.m.type)
         let price = localMeal.m.price
-        cell.priceForOne.text = String(price) + "₽"
-        cell.priceForAll.text = String(price * localMeal.a) + "₽"
+        //cell.priceForOne.text = String(price) + "₽"
+        //cell.priceForAll.text = String(price * localMeal.a) + "₽"
         cell.id = localMeal.id
         cell.selectionStyle = .none
         cell.stepperCount.text = String(localMeal.a)

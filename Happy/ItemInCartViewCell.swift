@@ -15,14 +15,18 @@ class ItemInCartViewCell: UITableViewCell {
     @IBOutlet weak var priceForOne: UILabel!
     @IBOutlet weak var priceForAll: UILabel!
     @IBOutlet weak var stepperCount: UILabel!
+    @IBOutlet weak var mainView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        mainView.layer.cornerRadius = 8
+        mainView.layer.borderWidth = 0.5
+        mainView.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
         // Configure the view for the selected state
     }
 
